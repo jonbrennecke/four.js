@@ -1,0 +1,14 @@
+
+//- include FOUR.js' shaders
+mixin shaders
+	script#four--shader-depth-fs(type="x-shader/x-fragment")
+		include shaders/depthOfField.fs
+	script#four--shader-depth-vs(type="x-shader/x-vertex")
+		include shaders/basic.vs
+
+
+//- include all that FOUR.js stuff
+mixin fourjs
+	+shaders
+	script(src="scripts/four/four-shaders.js")
+	script(src="scripts/four/four.js")
